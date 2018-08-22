@@ -69,6 +69,9 @@ function metaToComponent(meta, props, data) {
     else if (metaType == 'object' && meta instanceof Date) {
         return meta
     }
+    else if (metaType == 'object' && meta instanceof Promise) {
+        return meta
+    }
     else if (metaType == 'object') {
         if (meta.component) {
             if (typeof meta.component == 'function') {
